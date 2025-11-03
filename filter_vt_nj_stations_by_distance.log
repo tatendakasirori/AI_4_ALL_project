@@ -1,0 +1,3 @@
+2025-11-03 12:43:44,391 [INFO] Loading station metadata from data\weather\isd\metadata\vt_nj_stations.csv
+2025-11-03 12:43:44,412 [INFO] Filtering stations within 100 km of KDIX and KCXX radars...
+2025-11-03 12:43:44,442 [INFO] Saved 24 filtered stations to data\weather\isd\metadata\vt_nj_stations_near_radars.csv
