@@ -3,6 +3,12 @@ import math
 import logging
 import pandas as pd
 
+"""
+This script filters Vermont (VT) and New Jersey (NJ) ISD weather stations to retain only those located within a 
+specified distance (default 100 km) of the BirdCast NEXRAD radar sites KDIX (Fort Dix, NJ) and 
+KCXX (Burlington, VT), producing a CSV file of nearby stations for localized weather approximation.
+"""
+
 # Configure logging
 logging.basicConfig(
     filename="filter_vt_nj_stations_by_distance.log",

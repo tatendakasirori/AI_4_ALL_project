@@ -5,13 +5,20 @@ import shutil
 from pathlib import Path
 import logging
 
+'''
+This Python script automates the process of downloading Integrated Surface Data (ISD) from the NOAA National 
+Centers for Environmental Information (NCEI) for selected weather stations located near radar sites in Vermont 
+and New Jersey. It ensures that all relevant yearly data files are fetched, extracted, and saved in an organized 
+directory structure.
+'''
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def download_isd_data():
     metadata_dir = Path("data/weather/isd/metadata")
     data_dir = Path("data/weather/isd/raw")
 
-    stations_path = metadata_dir / "vt_nj_stations.csv"
+    stations_path = metadata_dir / "vt_nj_stations_near_radars.csv"
     stations = pd.read_csv(stations_path)
 
     base_url = "https://www.ncei.noaa.gov/pub/data/noaa"
