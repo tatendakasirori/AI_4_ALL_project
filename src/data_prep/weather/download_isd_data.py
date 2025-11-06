@@ -8,8 +8,8 @@ import logging
 '''
 This Python script automates the process of downloading Integrated Surface Data (ISD) from the NOAA National 
 Centers for Environmental Information (NCEI) for selected weather stations located near radar sites in Vermont 
-and New Jersey. It ensures that all relevant yearly data files are fetched, extracted, and saved in an organized 
-directory structure.
+and New Jersey. It ensures that all relevant yearly data files are fetched, extracted, and saved in 
+data/weather/isd/raw.
 '''
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
