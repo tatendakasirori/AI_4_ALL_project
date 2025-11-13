@@ -7,7 +7,7 @@ lunar_irradiance,float64,0.0,11.313858330065154,0
 quality_score,float64,0.8533542757417103,1.0,0
 total_passed,float64,0.0,25221600.0,0
 peak_birds,float64,300.0,10023300.0,0
-peak_direction,float64,,,1586
+peak_direction,object,N/A,N/A,0
 peak_speed_mph,float64,0.0,59.0,347
 peak_altitude_ft,float64,500.0,5900.0,347
 day_of_year,int32,60,319,0
