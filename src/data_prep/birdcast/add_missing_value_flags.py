@@ -53,13 +53,19 @@ def add_missing_value_flags(input_csv, output_csv):
     print(df[['peak_direction', 'peak_speed_mph', 'peak_altitude_ft']].isnull().sum())
     
     # ====================================================
-    # 1. PEAK_DIRECTION: Replace NaN with "Low activity"
+    # 1. PEAK_DIRECTION: Replace NaN and "—" with "Low activity"
     # ====================================================
     logger.info("\n[1] Processing peak_direction...")
     direction_missing_count = df['peak_direction'].isnull().sum()
-    logger.info(f"   Missing values in peak_direction: {direction_missing_count}")
+    logger.info(f"   Missing values (NaN) in peak_direction: {direction_missing_count}")
+    
+    # Also replace em-dash "—" with "Low activity"
+    dash_count = (df['peak_direction'] == "—").sum()
+    logger.info(f"   Missing values (—) in peak_direction: {dash_count}")
+    
+    df['peak_direction'] = df['peak_direction'].replace("—", "Low activity")
     df['peak_direction'] = df['peak_direction'].fillna("Low activity")
-    logger.info(f"   ✓ Filled with 'Low activity'")
+    logger.info(f"   ✓ Filled NaN and '—' with 'Low activity' (total replaced: {direction_missing_count + dash_count})")
     
     # ====================================================
     # 2. PEAK_SPEED_MPH: Replace NaN with -1 + add flag
