@@ -1,0 +1,14 @@
+Feature,Importance
+month,0.21680821
+day_of_year,0.09677439
+temperature_2m (°C),0.09163363
+wind_speed_10m (km/h),0.08504729
+lunar_irradiance_yj,0.065478094
+ntl_variability_log,0.065142564
+gapfilled_ntl_log,0.059119545
+relative_humidity_2m (%),0.057564378
+alan_lunar_interaction,0.056553684
+cloud_cover (%),0.055488497
+rain (mm),0.05498767
+alan_cloud_interaction,0.05287967
+state_VT,0.042522263
